@@ -102,7 +102,7 @@ Se [løsningsforslag](assignments/button/button-toggle.md) på oppgaven.
 
 Lag et trafikklys som går fra rødt, gult til grønt etter man har trykket på en knapp, og så tilbake noen sekunder senere.
 
-Se [løsningsforslag](assignments/button/traffic-light.md) på oppgaven.
+Se [løsningsforslag](assignments/button/trafficlight.md) på oppgaven.
 
 ### Oppgave 4 - Les analoge signaler
 
@@ -192,7 +192,7 @@ Få en led til å blinke saktere eller fortere ved å vri på en variabel motsta
 
 Se [løsningsforslag](assignments/adc/blinking-led.md) på oppgaven.
 
-### Eksempel 7 - Les temperatur
+### Oppgave 7 - Les temperatur
 
 ![Knapp](img/serial-button.png)
 ![Knapp](img/plotter-button.png)
@@ -208,6 +208,6 @@ while(True):
     time.sleep(0.5)
 ```
 
-### Eksempel 8 - NeoPixel (RGB)
+### Oppgave 8 - NeoPixel (RGB)
 
-### Eksempel 9 - Volumkontroll
+### Oppgave 9 - Volumkontroll
