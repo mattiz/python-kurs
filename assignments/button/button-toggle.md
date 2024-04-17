@@ -35,6 +35,8 @@ Les mer om debouncing på: https://learn.adafruit.com/debouncer-library-python-c
 
 Eksemplet under bruker et bibliotek for løse problemet med debouncing. Man må kopiere filene `adafruit_debouncer.py` og `adafruit_ticks.py` til lib-katalogene på diskstasjonen for å kjøre eksemplet. Filene kan lastes ned fra [dette filområdet](lib).
 
+Last ned [biblioteker](button-debounce-libs.zip) og pakk ut i `lib` på CIRCUITPY-disken for å få eksemplet nedenfor til å virke.
+
 ```python
 import board
 import time

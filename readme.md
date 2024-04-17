@@ -212,4 +212,50 @@ while(True):
 
 ### Oppgave 8 - NeoPixel (RGB)
 
-### Oppgave 9 - Volumkontroll
+### Oppgave 9 - Volumkontroller
+
+![Knapp](assignments/volume-controller/volume-controller.png)
+
+Last ned [biblioteker](assignments/volume-controller/volume-controller-libs.zip) og pakk ut i `lib` på CIRCUITPY-disken for å få eksemplet nedenfor til å virke.
+
+```python
+import board
+from digitalio import DigitalInOut, Direction, Pull
+from adafruit_debouncer import Debouncer
+import usb_hid
+from adafruit_hid.consumer_control import ConsumerControl
+from adafruit_hid.consumer_control_code import ConsumerControlCode
+import time
+
+button_one = DigitalInOut(board.GP15)
+button_one.direction = Direction.INPUT
+button_one.pull = Pull.UP
+volume_up = Debouncer(button_one)
+
+button_two = DigitalInOut(board.GP14)
+button_two.direction = Direction.INPUT
+button_two.pull = Pull.UP
+volume_down = Debouncer(button_two)
+
+cc = ConsumerControl(usb_hid.devices)
+
+while True:
+    volume_up.update()
+    volume_down.update()
+    
+    if volume_up.fell:
+        print('Volume up pressed')
+        cc.press(ConsumerControlCode.VOLUME_INCREMENT)
+    
+    if volume_up.rose:
+        print('Volume up released')
+        cc.release()
+    
+    if volume_down.fell:
+        print('Volume down pressed')
+        cc.press(ConsumerControlCode.VOLUME_DECREMENT)
+    
+    if volume_down.rose:
+        print('Volume down released')
+        cc.release()
+```
