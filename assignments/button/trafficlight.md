@@ -1,5 +1,7 @@
 # Trafikklys
 
+Eksemplet under er et trafikklys som går fra rødt, gult til grønt etter man har trykket på en knapp, og så tilbake noen sekunder senere.
+
 ![Breadboard](trafficlight.png)
 
 ```python

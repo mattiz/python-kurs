@@ -72,6 +72,8 @@ while True:
 
 Koble til en ekstra LED og endre programmeringskoden så begge blinker.
 
+Se [løsningsforslag](assignments/blinky/blinky-two-leds.md) på oppgaven.
+
 ### Oppgave 3 - Knapp
 
 ![Knapp](assignments/button/button.png)
