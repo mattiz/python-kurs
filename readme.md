@@ -8,7 +8,7 @@ https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython
 
 ## Komponentsett
 
-Bilde av komponenter
+![Components](/img/components.png)
 
 ## Installer CircuitPyton
 
@@ -26,7 +26,7 @@ Les mer på https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-ci
 
 ### Oppgave 1 - Blinker
 
-Lag et program som får den interne LED-en til å blinke.
+Lag et program som får LED-lyset på Raspberry Pi Pico-kortet til å blinke.
 
 ```python
 import board
@@ -49,7 +49,7 @@ Endre verdiene på `time.sleep(...)` for å få lysdioden til å blinke saktere 
 
 ### Oppgave 2 - Blinker med ekstern LED
 
-Koble opp skjemaet og last opp koden for å se at lysdioden blinker
+Koble opp skjemaet og last opp koden for å se at lysdioden blinker.
 
 ![Blinky](assignments/blinky/blinky.png)
 
