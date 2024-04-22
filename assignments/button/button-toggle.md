@@ -2,7 +2,7 @@
 
 Eksemplet under gjør at man kan skru LED-en av og på ved hjelp av en knapp.
 
-![Knapp](button.png)
+![Breadboard](button.png)
 
 ```python
 import board

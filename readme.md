@@ -22,6 +22,8 @@ Last ned fra https://codewith.mu
 
 Les mer på https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython/installing-mu-editor
 
+<br>
+
 ## Oppgaver
 
 ### Oppgave 1 - Blinker
@@ -47,11 +49,13 @@ while True:
 
 Endre verdiene på `time.sleep(...)` for å få lysdioden til å blinke saktere eller raskere.
 
+<br>
+
 ### Oppgave 2 - Blinker med ekstern LED
 
-Koble opp skjemaet og last opp koden for å se at lysdioden blinker.
+Koble opp skjemaet og last opp koden for å se at lysdioden blinker. Husk å koble lysdioden riktig vei.
 
-![Blinky](assignments/blinky/blinky.png)
+![Breadboard](assignments/blinky/blinky.png)
 
 ```python
 import board
@@ -74,9 +78,13 @@ Koble til en ekstra LED og endre programmeringskoden så begge blinker.
 
 Se [løsningsforslag](assignments/blinky/blinky-two-leds.md) på oppgaven.
 
+<br>
+
 ### Oppgave 3 - Knapp
 
-![Knapp](assignments/button/button.png)
+I eksemplet nedenfor vil LED-lampen lyse når man holder inne knappen.
+
+![Breadboard](assignments/button/button.png)
 
 ```python
 import board
@@ -90,13 +98,13 @@ button.switch_to_input(pull=digitalio.Pull.DOWN)
 while True:
     if button.value:
         led.value = True
-    
-    led.value = False
+    else:
+        led.value = False
 ```
 
 #### Ekstraoppgave 1
 
-Endre programmeringskoden så LED-en skrur seg på med ett klikk på knappen og skrur seg av med et nytt klikk.
+Endre programmeringskoden så LED-en skrur seg på med ett klikk på knappen og skrur seg av med et nytt klikk. Det er ikke nødvendig å endre kretsen.
 
 Se [løsningsforslag](assignments/button/button-toggle.md) på oppgaven.
 
@@ -106,17 +114,19 @@ Lag et trafikklys som går fra rødt, gult til grønt etter man har trykket på 
 
 Se [løsningsforslag](assignments/button/trafficlight.md) på oppgaven.
 
+<br>
+
 ### Oppgave 4 - Les analoge signaler
 
 Dette eksemplet viser hvordan man kan lese verdien fra en skru-knapp (potensiometer) ved hjelp av analog inngang på mikrokontrolleren. Åpne serial-konsollet for å se verdiene som blir lest av.
 
-Når man skrur på knappen vil man få et tall på mellom 0 og 65535 (16-bit) ved å skru på Pot-meteret.
+![Serial](img/serial-button.png)
 
-![Knapp](img/serial-button.png)
+Når man skrur på knappen vil man få et tall på mellom 0 og 65535 (16-bit) ved å skru på Pot-meteret.
 
 Les mer på: https://learn.adafruit.com/circuitpython-libraries-on-any-computer-with-raspberry-pi-pico/adc
 
-![Knapp](assignments/adc/adc.png)
+![Breadboard](assignments/adc/adc.png)
 
 ```python
 import time
@@ -135,14 +145,18 @@ while True:
     time.sleep(0.5)
 ```
 
+<br>
+
 ### Oppgave 5 - Pulsbreddemodulering
 
-![Knapp](img/serial-button.png)
-![Knapp](img/plotter-button.png)
+Dette eksemplet vil bruke [pulsbreddemodulering](https://learn.sparkfun.com/tutorials/pulse-width-modulation/all) for å en LED-lampe til å vekselvis lyse svakere og sterkere. Åpne serial-konsollet og plotteren for å se signalet.
+
+![Serial](img/serial-button.png)
+![Plotter](img/plotter-button.png)
 
 Les mer: https://learn.adafruit.com/circuitpython-essentials/circuitpython-pwm
 
-![Knapp](assignments/adc/pwm.png)
+![Breadboard](assignments/adc/pwm.png)
 
 ```python
 import time
@@ -162,14 +176,18 @@ while True:
         time.sleep(0.02)
 ```
 
+<br>
+
 ### Oppgave 6 - Dimme LED
 
-![Knapp](img/serial-button.png)
-![Knapp](img/plotter-button.png)
+I denne oppgaven skal du lære å dimme en LED-lampe ved å vri på en variabel motstand. Legg merke til at både `led.duty_cycle` og `knob.value` er 16-bit, så vi slipper å tilpasse verdiene til hverandre. Åpne serial-konsollet og plotteren for å se signalet.
+
+![Serial](img/serial-button.png)
+![Plotter](img/plotter-button.png)
 
 Les mer: https://learn.adafruit.com/circuitpython-libraries-on-any-computer-with-raspberry-pi-pico/pwm
 
-![Knapp](assignments/adc/pwm-adc.png)
+![Breadboard](assignments/adc/pwm-adc.png)
 
 ```python
 import board
@@ -185,19 +203,22 @@ while True:
     led.duty_cycle = knob.value
     print((led.duty_cycle,))  # Open plotter
     time.sleep(0.05)
-
 ```
 
 #### Ekstraoppgave
 
-Få en led til å blinke saktere eller fortere ved å vri på en variabel motstand.
+Få en led til å blinke saktere eller fortere ved å vri på en variabel motstand. Det er ikke nødvendig å endre kretsen.
 
 Se [løsningsforslag](assignments/adc/blinking-led.md) på oppgaven.
 
+<br>
+
 ### Oppgave 7 - Les temperatur
 
-![Knapp](img/serial-button.png)
-![Knapp](img/plotter-button.png)
+I denne oppgaven skal du lære å lese av den innebyggede temperatursensoren. Åpne serial-konsollet og plotteren for å se signalet. Prøv å holde fingeren på den svarte brikken midt på kretskortet og se at temperaturen øker.
+
+![Serial](img/serial-button.png)
+![Plotter](img/plotter-button.png)
 
 Les mer: https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython/temperature-gauge
 
@@ -210,11 +231,13 @@ while(True):
     time.sleep(0.5)
 ```
 
-### Oppgave 8 - NeoPixel (RGB)
+<br>
 
-### Oppgave 9 - Volumkontroller
+### Oppgave 8 - Volumkontroller
 
-![Knapp](assignments/volume-controller/volume-controller.png)
+En Raspberry Pi Pico kan programmeres til å opptre som en USB-enhet (mus, tastatur, mediakontroller, etc.). I denne oppgaven vil du lære hvordan du lager en volumkontroller som kan styre volumet på samme måte som volumknappene på tastaturet ditt. Hold nede knappen til venstre for å øke volumet, eller hold nede knappen til høyre for å senke volumet.
+
+![Breadboard](assignments/volume-controller/volume-controller.png)
 
 Last ned [biblioteker](assignments/volume-controller/volume-controller-libs.zip) og pakk ut i `lib` på CIRCUITPY-disken for å få eksemplet nedenfor til å virke.
 
@@ -259,3 +282,7 @@ while True:
         print('Volume down released')
         cc.release()
 ```
+
+#### Ekstraoppgave
+
+Kan du forenkle programmeringskoden ovenfor ved å bruke funksjoner?

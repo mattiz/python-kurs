@@ -46,3 +46,5 @@ while True:
         yellow.value = False
         red.value = True
 ```
+
+Kan du forenkle koden ovenfor ved hjelp av funksjoner?
