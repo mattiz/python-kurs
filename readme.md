@@ -6,15 +6,29 @@
 
 https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython
 
+<br>
+
 ## Komponentsett
 
 ![Components](/img/components.png)
+
+- Raspberry Pi Pico
+- Koblingsbrett
+- Ledninger
+- 3 LED (rød, grønn, gul)
+- 2 impulsbrytere
+- 1 variabel motstand (1KΩ)
+- 3 resistorer (330Ω)
+
+<br>
 
 ## Installer CircuitPyton
 
 Last ned firmware fra: https://circuitpython.org/board/raspberry_pi_pico/
 
 https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython/circuitpython
+
+<br>
 
 ## Installer MU Editor
 
