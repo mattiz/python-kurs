@@ -1,5 +1,7 @@
 # Python-kurs
 
+[Last ned presentasjonen](slides.pdf)
+
 ## Raspberry Pi Pico
 
 ![Pinout](img/pico-pinout.svg)
